@@ -1,0 +1,66 @@
+/* Main container styling */
+.owner-details-main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 13rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styling */
+  .owner-details-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Heading styling */
+  .owner-details-heading {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Content styling */
+  .owner-details-content {
+    padding: 1rem;
+  }
+  
+  /* No restaurants message styling */
+  .owner-details-no-restaurants {
+    color: #d9534f; /* Bootstrap Danger color */
+    font-size: 1.2rem;
+  }
+  
+  /* List styling */
+  .owner-details-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .owner-details-item {
+    margin-bottom: 1rem;
+  }
+  
+  /* Link styling */
+  .owner-details-link {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .owner-details-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Article styling */
+  .owner-details-article {
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .owner-details-restaurant-name {
+    margin: 0;
+    color: #333;
+  }
+  

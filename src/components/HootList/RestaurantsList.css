@@ -1,0 +1,52 @@
+/* RestaurantsList.css */
+
+/* Container for the entire list of restaurants */
+.restaurants-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7rem;
+    background-color: #f8f9fa;
+    margin: 0 auto;
+  }
+  
+  /* Styling for individual restaurant items */
+  .restaurant-item {
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Styling for the article inside each restaurant item */
+  .restaurant-article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the restaurant name */
+  .restaurant-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Link styling */
+  .restaurant-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .restaurant-link:hover .restaurant-article {
+    background-color: #f0f0f0;
+  }
+  
+  /* Loading state styling */
+  .loading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #666;
+  }
+  

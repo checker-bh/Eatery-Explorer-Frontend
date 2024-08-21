@@ -1,0 +1,87 @@
+/* Container for the entire page */
+.restaurant-details-container {
+    padding: 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header styling */
+  .restaurant-header {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+  }
+  
+  .restaurant-info h1, .restaurant-info h2, .restaurant-info h3 {
+    margin: 0.5rem 0;
+  }
+  
+  .menu-section {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .menu-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-section li {
+    margin: 0.5rem 0;
+  }
+  
+  .action-section {
+    margin-bottom: 2rem;
+  }
+  
+  .action-link {
+    display: block;
+    margin: 0.5rem 0;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .action-link:hover {
+    text-decoration: underline;
+  }
+  
+  .delete-form {
+    margin-top: 1rem;
+  }
+  
+  .comments-section {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  .comment-item {
+    margin-bottom: 1rem;
+  }
+  
+  .comment-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .comment-form button {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .comment-form button:hover {
+    background-color: #c82333;
+  }
+  

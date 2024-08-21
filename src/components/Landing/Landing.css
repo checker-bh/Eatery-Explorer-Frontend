@@ -1,0 +1,32 @@
+/* Landing.css */
+
+/* Container for the entire landing page */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+  }
+  
+  /* Header section styling */
+  .landing-header {
+    text-align: center;
+  }
+  
+  /* Styling for the main title */
+  .landing-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Styling for the subtitle */
+  .landing-subtitle {
+    font-size: 1.25rem;
+    color: #555;
+  }
+  

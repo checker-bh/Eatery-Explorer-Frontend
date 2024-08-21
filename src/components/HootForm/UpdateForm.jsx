@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import './UpdateForm.css'; // Import the CSS file
 
 const UpdateForm = ({ handleUpdateRestaurant }) => {
   const { restaurantId } = useParams();
   const [formData, setFormData] = useState({
     name: '',
     location: '',
-    describtion: '',
+    description: '',
     cuisine: '',
   });
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const UpdateForm = ({ handleUpdateRestaurant }) => {
       setFormData({
         name: data.name,
         location: data.location,
-        describtion: data.describtion,
+        description: data.description,
         cuisine: data.cuisine,
       });
     }
@@ -39,51 +40,66 @@ const UpdateForm = ({ handleUpdateRestaurant }) => {
   };
 
   return (
-    <main>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          required
-          type="text"
-          name="name"
-          id="name"
-          value={formData.name}
-          onChange={handleChange}
-        />
-        <label htmlFor="describtion">Description:</label>
-        <textarea
-          required
-          name="describtion"
-          id="describtion"
-          value={formData.describtion}
-          onChange={handleChange}
-        />
-        <label htmlFor="location">Location:</label>
-        <input
-          required
-          type="text"
-          name="location"
-          id="location"
-          value={formData.location}
-          onChange={handleChange}
-        />
-        <label htmlFor="cuisine">Cuisine:</label>
-        <select
-          required
-          name="cuisine"
-          id="cuisine"
-          value={formData.cuisine}
-          onChange={handleChange}
-        >
-          <option value="italian">Italian</option>
-          <option value="indian">Indian</option>
-          <option value="persian">Persian</option>
-          <option value="arabian">Arabian</option>
-          <option value="japanese">Japanese</option>
-          <option value="mexican">Mexican</option>
-        </select>
-        <button type="submit">Update</button>
-      </form>
+    <main className="update-form-container">
+      <div className="update-form-wrapper">
+        <h1 className="form-title">Update Restaurant</h1>
+        <form onSubmit={handleSubmit} className="update-form">
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              required
+              type="text"
+              name="name"
+              id="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="form-input"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="description">Description:</label>
+            <textarea
+              required
+              name="description"
+              id="description"
+              value={formData.description}
+              onChange={handleChange}
+              className="form-textarea"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="location">Location:</label>
+            <input
+              required
+              type="text"
+              name="location"
+              id="location"
+              value={formData.location}
+              onChange={handleChange}
+              className="form-input"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="cuisine">Cuisine:</label>
+            <select
+              required
+              name="cuisine"
+              id="cuisine"
+              value={formData.cuisine}
+              onChange={handleChange}
+              className="form-select"
+            >
+              <option value="italian">Italian</option>
+              <option value="indian">Indian</option>
+              <option value="persian">Persian</option>
+              <option value="arabian">Arabian</option>
+              <option value="japanese">Japanese</option>
+              <option value="mexican">Mexican</option>
+            </select>
+          </div>
+          <button type="submit" className="submit-button">Update</button>
+        </form>
+      </div>
     </main>
   );
 };

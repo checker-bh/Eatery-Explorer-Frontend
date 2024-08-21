@@ -1,0 +1,41 @@
+/* NavBar.css */
+
+/* Container for the entire navbar */
+.navbar-container {
+    background-color: #333;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* Styling for the navigation bar */
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+  
+  /* Flex container for the links */
+  .navbar-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Styling for individual links */
+  .navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+  
+  .navbar-link:hover {
+    background-color: #555;
+  }
+  

@@ -1,10 +1,9 @@
 // src/components/CommentForm/CommentForm.jsx
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import './CommentForm.css'; // Import the CSS file
 
-import commentService from '../../services/commentService';
-
-const CommentForm = ({handleAddComment}) => {
+const CommentForm = ({ handleAddComment }) => {
   const [formData, setFormData] = useState({ text: '' });
 
   const handleChange = (evt) => {
@@ -13,24 +12,29 @@ const CommentForm = ({handleAddComment}) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    // handleAddComment
+    handleAddComment(formData);
     setFormData({ text: '' });
-    handleAddComment(formData)
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="text-input"></label>
-      <textarea
-        required
-        type="text"
-        name="text"
-        id="text-input"
-        value={formData.text}
-        onChange={handleChange}
-      />
-      <button type="submit">SUBMIT COMMENT</button>
-    </form>
+    <div className="comment-form-container">
+      <form onSubmit={handleSubmit} className="comment-form">
+        <div className="form-group">
+          <textarea
+            required
+            name="text"
+            id="text-input"
+            value={formData.text}
+            onChange={handleChange}
+            placeholder="Write your comment here..."
+            className="comment-textarea"
+          />
+        </div>
+        <div className="form-group">
+          <button type="submit" className="submit-button">Submit Comment</button>
+        </div>
+      </form>
+    </div>
   );
 };
 
