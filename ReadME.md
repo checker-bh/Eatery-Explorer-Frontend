@@ -9,7 +9,7 @@ the Eater Explorer is a website where users can find various restaurants with va
 ## Instructions
 The user must sign up, and then sign in with the same username and password, each user can add his own restaurant along with it's details (restaurant name, cuisine, location, and description), also he can add food menu in each restaurant along with it's details(food name, type, price and description), the owner of the restaurant can edit the details of the restaurant and food, and he can delete them. Also each user can view the list of all the restaurants and add comments on the restaurant as well as adding comments on the food, each user can delete his own comment. In addition, the owner of the restaurant can view the list of the restaurants that he owns along with it's details, also he can view the food menu of each restaurant he owns along with it's details.
 
- [Deployment Link](https://eatery-explorer-frontend-q5bkcaaqn-mujtaba-sultans-projects.vercel.app/)
+ [Deployment Link](https://eatery-explorer-frontend-85jkykcr0-mujtaba-sultans-projects.vercel.app/)
 
 
 
