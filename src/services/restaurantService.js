@@ -162,10 +162,26 @@ async function deleteFood(restaurantId, foodId) {
   }
 }
 
+const like = async (restaurantId) => {
+  const token = localStorage.getItem('token');
+  try {
+    const response = await fetch(`${BASE_URL}/${restaurantId}/like`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+    });
+    const data = await response.json();  
+    return data;  
+  } catch (error) {
+    console.error('Error:', error);
+    throw error;
+  }
+}
 
 
 
 
 
-
-export default { index, show, create, getOwnerById, showFood, update, addFood, deleter, updateFood, deleteFood};
+export default { index, show, create, getOwnerById, showFood, update, addFood, deleter, updateFood, deleteFood , like};

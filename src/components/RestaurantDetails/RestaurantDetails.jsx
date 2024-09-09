@@ -10,10 +10,14 @@ import "./RestaurantDetails.css";
 import AuthorDate from "../common/AuthorDate";
 import CommentForm from "../CommentForm/CommentForm";
 
+
 const RestaurantDetails = (props) => {
   const { restaurantsId } = useParams();
   const [restaurant, setRestaurant] = useState(null);
   const [comment, setComment] = useState(null);
+  const [liked, setLiked] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [like, setLikes] = useState(0);
   const navigate = useNavigate();
 
   async function getRestaurant() {
@@ -75,6 +79,40 @@ const RestaurantDetails = (props) => {
       </div>
     );
   }
+
+  
+{/*-----------------------------------------------------------------------------------------------------------*/}
+// start like botton 
+
+
+  
+
+
+  const fetchInitialData = async () => {
+    try {
+      const response = await restaurantService.like(restaurantsId);
+      setRestaurant(response);
+    } catch (error) {
+      console.error('Error fetching likes:', error);
+    }
+  };
+
+  
+
+  const handleLike= async () => {
+      fetchInitialData();
+
+  };
+
+
+
+
+// end like botton 
+{/*-----------------------------------------------------------------------------------------------------------*/}
+
+
+
+
 
   // console.log(restaurant);
   return (
@@ -202,6 +240,21 @@ const RestaurantDetails = (props) => {
         ) : null}
       </div>
 
+
+
+{/*-----------------------------------------------------------------------------------------------------------*/}
+        {/* new code for likes */}
+        <section className="Likes-section">
+        {/* <button type="button" class="btn btn-secondary btn-sm">❤️</button> {restaurant.like} */}
+        <button onClick={handleLike} disabled={loading}>
+      {restaurant.like.length} {restaurant.like.length === 1 ? 'Like' : 'Likes'}
+        </button>
+      </section>
+        {/* end of the new code for likes */}
+
+{/*-----------------------------------------------------------------------------------------------------------*/}
+
+
       <section className="comments-section">
         <h2>Comments on {restaurant.name}:</h2>
         <CommentForm handleAddComment={handleAddComment} />
@@ -228,5 +281,6 @@ const RestaurantDetails = (props) => {
     </main>
   );
 };
+
 
 export default RestaurantDetails;

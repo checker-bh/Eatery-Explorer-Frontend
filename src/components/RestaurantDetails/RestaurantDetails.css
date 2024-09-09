@@ -132,3 +132,39 @@
   font-size: 1.5em;
   color: #007bff;
 }
+
+/*im use chatGpt to make style to like bottton */
+.Likes-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.Likes-section button {
+  background-color: #ff4d4d; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.Likes-section button:hover {
+  background-color: #ff1a1a; 
+}
+
+.Likes-section button:disabled {
+  background-color: #ccc; 
+  cursor: not-allowed;
+}
+
+.Likes-section button:before {
+  content: "❤️ "; 
+  font-size: 18px;
+  margin-right: 5px;
+}
